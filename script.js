@@ -1,26 +1,44 @@
 
-
+$(document).ready(function () { 
+//getting the value entered on timeblock and when save button is clickied
+// adding to local storage
 var saveItemEl = document.querySelector('.save');
 
 saveItemEl.addEventListener("click", function() {
     var addedItem = document.querySelector(".entryItem").value;
-    localStorage.setItem("addedItem", addedItem);
-    var storeItem =localStorage.getItem("addedItem");
-
-    console.log("store item is " + storeItem)
+    
+    //var storeItem =localStorage.getItem("addedItem");
+    
+    //console.log("store item is " + storeItem)
     console.log("added Item is " + addedItem)
-    addedItem.appendChild(storeItem);
-
+    //addedItem.appendChild(storeItem);
+    localStorage.setItem("addedItem", addedItem);
 }); 
 
-;
-var dayWeek = moment().format('[Today is] dddd');
-var today = moment();
+// $('.save').on('click', function(){
+//     var entry = $(this).siblings('.entryItem').val();
+    
+//     var time = $(this).parent().attr('id');
 
-$("#currentDay").text(today);
+//     console.log("entry " , entry);
+//     console.log("time " , time);
 
+//     localStorage.setItem(entry, time)
 
+// })
 
+$('#timeNine .entryItem').val(localStorage.getItem('timeNine'));
+
+// getting cuurent date and time
+
+  function displayTime() {
+    var today = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+    $("#currentDay").text(today);
+  }
+
+    setInterval(displayTime, 1000);
+
+//adding the time for each timeblock
 var nine = 9;
 $('#timeNine').text(nine );
 var ten = 10;
@@ -40,7 +58,11 @@ $('#timeSixteen').text(sixteen);
 var seventeen = 17;
 $('#timeSeventeen').text(seventeen);
 
- var currentTime =moment().format('HH');
+
+// conditional statements for each time block so if the colour
+// is dependant on the current time
+
+var currentTime =moment().format('HH');
 
 
 if (currentTime>nine){
@@ -110,3 +132,5 @@ if (currentTime>seventeen){
 }  else{
     $('.custom-colSeventeen-6').css('background-color','red');
 };
+
+})
