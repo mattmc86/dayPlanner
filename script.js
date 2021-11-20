@@ -2,25 +2,89 @@
 $(document).ready(function () { 
 //getting the value entered on timeblock and when save button is clickied
 // adding to local storage
-var saveItemEl = document.querySelector('.save');
+var saveItemElNine = document.querySelector('.saveNine');
+var saveItemElTen = document.querySelector('.saveTen');
+var saveItemElEleven = document.querySelector('.saveEleven');
+var saveItemElTwelve = document.querySelector('.saveTwelve');
+var saveItemElThirteen = document.querySelector('.saveThirteen');
+var saveItemElFourteen = document.querySelector('.saveFourteen');
+var saveItemElFifteen = document.querySelector('.saveFifteen');
+var saveItemElSixteen = document.querySelector('.saveSixteen');
+var saveItemElSeventeen = document.querySelector('.saveSeventeen');
 
-saveItemEl.addEventListener("click", function() {
-    var addedItem = document.querySelector(".entryItem").value;
-    console.log("added Item is " + addedItem)
-    localStorage.setItem("addedItem", addedItem);
+// adding to local storage
+
+saveItemElNine.addEventListener("click", function() {
+
+    var addedItemNine = document.querySelector(".entryItemNine").value;
+    console.log("added Item is " + addedItemNine)
+    localStorage.setItem("addedItemNine", addedItemNine);
 }); 
 
+saveItemElTen.addEventListener("click", function() {
+
+    var addedItemTen = document.querySelector(".entryItemTen").value;
+    console.log("added Item is " + addedItemTen)
+    localStorage.setItem("addedItemTen", addedItemTen);
+}); 
+saveItemElEleven.addEventListener("click", function() {
+
+    var addedItemEleven = document.querySelector(".entryItemEleven").value;
+    console.log("added Item is " + addedItemEleven)
+    localStorage.setItem("addedItemEleven", addedItemEleven);
+}); 
+saveItemElTwelve.addEventListener("click", function() {
+
+    var addedItemTwelve = document.querySelector(".entryItemTwelve").value;
+    console.log("added Item is " + addedItemTwelve)
+    localStorage.setItem("addedItemTwelve", addedItemTwelve);
+}); 
+
+saveItemElThirteen.addEventListener("click", function() {
+
+    var addedItemThirteen = document.querySelector(".entryItemThirteen").value;
+    console.log("added Item is " + addedItemThirteen)
+    localStorage.setItem("addedItemThirteen", addedItemThirteen);
+}); 
+
+saveItemElFourteen.addEventListener("click", function() {
+
+    var addedItemFourteen = document.querySelector(".entryItemFourteen").value;
+    console.log("added Item is " + addedItemFourteen)
+    localStorage.setItem("addedItemFourteen", addedItemFourteen);
+}); 
+
+saveItemElFifteen.addEventListener("click", function() {
+
+    var addedItemFifteen = document.querySelector(".entryItemFifteen").value;
+    console.log("added Item is " + addedItemFifteen)
+    localStorage.setItem("addedItemFifteen", addedItemFifteen);
+}); 
+
+saveItemElSixteen.addEventListener("click", function() {
+
+    var addedItemSixteen = document.querySelector(".entryItemSixteen").value;
+    console.log("added Item is " + addedItemSixteen)
+    localStorage.setItem("addedItemSixteen", addedItemSixteen);
+}); 
+
+saveItemElSeventeen.addEventListener("click", function() {
+
+    var addedItemSeventeen = document.querySelector(".entryItemSeventeen").value;
+    console.log("added Item is " + addedItemSeventeen)
+    localStorage.setItem("addedItemSeventeen", addedItemSeventeen);
+}); 
 //to ensure the value entered is still displayed after refresh
 
-$('#timeNine .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeTen .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeEleven .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeTwelve .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeThirteen .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeFourteen .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeFifteen .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeSixteen .entryItem').val(localStorage.getItem('addedItem'));
-$('#timeSeventeen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeNine .entryItemNine').val(localStorage.getItem('addedItemNine'));
+$('#timeTen .entryItemTen').val(localStorage.getItem('addedItemTen'));
+$('#timeEleven .entryItemEleven').val(localStorage.getItem('addedItemEleven'));
+$('#timeTwelve .entryItemTwelve').val(localStorage.getItem('addedItemTwelve'));
+$('#timeThirteen .entryItem').val(localStorage.getItem('addedItemThirteen'));
+$('#timeFourteen .entryItem').val(localStorage.getItem('addedItemFourteen'));
+$('#timeFifteen .entryItem').val(localStorage.getItem('addedItemFifteen'));
+$('#timeSixteen .entryItem').val(localStorage.getItem('addedItemSixteen'));
+$('#timeSeventeen .entryItem').val(localStorage.getItem('addedItemSeventeen'));
 
 // getting curent date and time
 
