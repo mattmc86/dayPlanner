@@ -14,4 +14,4 @@ The current build satisfies all of the acceptance criteria but a future improvem
 
 Contact Name: Matthew McKenna email:matthewmckenna1986@hotmail.com
 
-Project Link: 
+Project Link: https://mattmc86.github.io/dayPlanner/
