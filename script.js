@@ -6,37 +6,30 @@ var saveItemEl = document.querySelector('.save');
 
 saveItemEl.addEventListener("click", function() {
     var addedItem = document.querySelector(".entryItem").value;
-    
-    //var storeItem =localStorage.getItem("addedItem");
-    
-    //console.log("store item is " + storeItem)
     console.log("added Item is " + addedItem)
-    //addedItem.appendChild(storeItem);
     localStorage.setItem("addedItem", addedItem);
 }); 
 
-// $('.save').on('click', function(){
-//     var entry = $(this).siblings('.entryItem').val();
-    
-//     var time = $(this).parent().attr('id');
+//to ensure the value entered is still displayed after refresh
 
-//     console.log("entry " , entry);
-//     console.log("time " , time);
+$('#timeNine .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeTen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeEleven .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeTwelve .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeThirteen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeFourteen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeFifteen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeSixteen .entryItem').val(localStorage.getItem('addedItem'));
+$('#timeSeventeen .entryItem').val(localStorage.getItem('addedItem'));
 
-//     localStorage.setItem(entry, time)
-
-// })
-
-$('#timeNine .entryItem').val(localStorage.getItem('timeNine'));
-
-// getting cuurent date and time
+// getting curent date and time
 
   function displayTime() {
     var today = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
     $("#currentDay").text(today);
   }
 
-    setInterval(displayTime, 1000);
+setInterval(displayTime, 1000);
 
 //adding the time for each timeblock
 var nine = 9;
